@@ -1,0 +1,84 @@
+﻿@using Microsoft.Ajax.Utilities
+<!DOCTYPE html>
+@{
+    ViewBag.Title = "Home Page";
+    var userName = "";
+    if (Session["userName"] == null)
+    {
+        if (Request.Cookies["userName"] == null || string.IsNullOrEmpty(Request.Cookies["userName"].Value))
+        {
+            userName = "";
+        }
+        else
+        {
+            userName = Request.Cookies["userName"].Value;
+        }
+    }
+    else
+    {
+        userName = Session["userName"].ToString();
+    }
+}
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - My ASP.NET Application</title>
+    <link rel="stylesheet" href="~/Content/layui/css/layui.css">
+    <script src="~/Content/layui/layui.js"></script>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+
+</head>
+<body>
+<div class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container df  ">
+        <div class="navbar-header flex5">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            @Html.ActionLink("Application name", "Index", "Home", new {area = ""}, new {@class = "navbar-brand"})
+
+            <ul class="nav navbar-nav">
+                <li>@Html.ActionLink("Home", "Index", "Home")</li>
+                <li>@Html.ActionLink("About", "About", "Home")</li>
+                <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
+            </ul>
+        </div>
+
+        <div class="flex2 df">
+            @if (userName == "" || string.IsNullOrEmpty(userName))
+            {
+                @Html.ActionLink("请先登录", "Login", "Home", new {area = ""}, new {@class = "navbar-brand"})
+            }
+            else
+            {
+                @Html.ActionLink("当前用户:" + userName, "Index", "Home", new {area = ""}, new {@class = "navbar-brand"})
+                <a class='navbar-brand' href='/Home/Logout'>登出</a>
+            }
+        </div>
+    </div>
+
+</div>
+
+<div class="container body-content">
+    @RenderBody()
+    <hr/>
+    <footer>
+        <p>&copy; @DateTime.Now.2020 - NET MVC5 学习Demo</p>
+    </footer>
+</div>
+
+@Scripts.Render("~/bundles/jquery")
+@Scripts.Render("~/bundles/bootstrap")
+@RenderSection("scripts", required: false)
+@RenderSection("headers", required: false)
+</body>
+<script>
+    layui.use('layer', function(){
+      const layer = layui.layer;
+    });  
+</script>
+</html>

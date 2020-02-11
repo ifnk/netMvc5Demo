@@ -1,0 +1,14 @@
+*.log
+
+
+### IntelliJ IDEA ###
+.idea
+*.iws
+*.iml
+*.ipr
+
+### visual studio ###
+.vs
+packages
+
+appName/src/test/*

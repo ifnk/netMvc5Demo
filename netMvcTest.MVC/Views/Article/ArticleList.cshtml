@@ -1,0 +1,85 @@
+﻿@using Webdiyer.WebControls.Mvc
+@model Webdiyer.WebControls.Mvc.PagedList<netMvcTest.Dto.Article.ArticleDto>
+
+@{
+    ViewBag.Title = "ArticleList";
+}
+
+<h2>ArticleList</h2>
+<h3>
+    @* /Home/Login 地址放到url.Action 是自动生成的对应地址 *@
+    @Url.Action("Login", "Home")
+</h3>
+
+<p>
+    @Html.ActionLink("Create New", "CreateArticle")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Title)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Content)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CommentCount)
+        </th>
+
+        <th>
+            @Html.DisplayNameFor(model => model.LikeCount)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.OpposeCount)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.UserEmail)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Title)
+            </td>
+            <td>
+                @* html.raw 不做转码操作 直接 显示 dto的 文本  *@
+                @Html.Raw(item.Content)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CommentCount)
+            </td>
+
+            <td>
+                @Html.DisplayFor(modelItem => item.LikeCount)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.OpposeCount)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.UserEmail)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "EditArticle", new {id = item.Id}) |
+                @Html.ActionLink("Details", "ArticleDetails", new {id = item.Id}) |
+                @Html.ActionLink("Delete", "Delete", new {id = item.Id})
+            </td>
+        </tr>
+    }
+</table>
+<div>
+    <nav>
+        @Html.Pager(Model, new PagerOptions()
+        {
+            PageIndexParameterName = "pageIndex",
+            ContainerTagName = "ul",
+            CssClass = "pagination",
+            CurrentPagerItemTemplate = "<li class=\"active\"><a href=\"#\">{0}</a></li>",
+            DisabledPagerItemTemplate = "<li class=\"disabled\"><a>{0}</a></li>",
+            PagerItemTemplate = "<li>{0}</li>",
+            Id = "bootstrappager"
+        })
+    </nav>
+</div>

@@ -1,0 +1,11 @@
+C:\Users\Administrator\RiderProjects\netMvcTest\netMvcTest.Dto\bin\Debug\netMvcTest.Dto.dll
+C:\Users\Administrator\RiderProjects\netMvcTest\netMvcTest.Dto\bin\Debug\netMvcTest.Dto.pdb
+C:\Users\Administrator\RiderProjects\netMvcTest\netMvcTest.Dto\obj\Debug\netMvcTest.Dto.csprojAssemblyReference.cache
+C:\Users\Administrator\RiderProjects\netMvcTest\netMvcTest.Dto\obj\Debug\netMvcTest.Dto.dll
+C:\Users\Administrator\RiderProjects\netMvcTest\netMvcTest.Dto\obj\Debug\netMvcTest.Dto.pdb
+C:\Users\Administrator\RiderProjects\netMvcTest\netMvcTest.Dto\bin\Debug\netMvcTest.Model.dll
+C:\Users\Administrator\RiderProjects\netMvcTest\netMvcTest.Dto\bin\Debug\EntityFramework.dll
+C:\Users\Administrator\RiderProjects\netMvcTest\netMvcTest.Dto\bin\Debug\netMvcTest.Model.pdb
+C:\Users\Administrator\RiderProjects\netMvcTest\netMvcTest.Dto\bin\Debug\netMvcTest.Model.dll.config
+C:\Users\Administrator\RiderProjects\netMvcTest\netMvcTest.Dto\bin\Debug\EntityFramework.xml
+C:\Users\Administrator\RiderProjects\netMvcTest\netMvcTest.Dto\obj\Debug\netMvcTest.Dto.csproj.CopyComplete

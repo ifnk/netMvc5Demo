@@ -1,0 +1,13 @@
+C:\Users\Administrator\RiderProjects\netMvcTest\netMvcTest.IBLL\bin\Debug\netMvcTest.IBLL.dll
+C:\Users\Administrator\RiderProjects\netMvcTest\netMvcTest.IBLL\bin\Debug\netMvcTest.IBLL.pdb
+C:\Users\Administrator\RiderProjects\netMvcTest\netMvcTest.IBLL\bin\Debug\netMvcTest.Dto.dll
+C:\Users\Administrator\RiderProjects\netMvcTest\netMvcTest.IBLL\bin\Debug\netMvcTest.Model.dll
+C:\Users\Administrator\RiderProjects\netMvcTest\netMvcTest.IBLL\bin\Debug\EntityFramework.dll
+C:\Users\Administrator\RiderProjects\netMvcTest\netMvcTest.IBLL\bin\Debug\netMvcTest.Dto.pdb
+C:\Users\Administrator\RiderProjects\netMvcTest\netMvcTest.IBLL\bin\Debug\netMvcTest.Model.pdb
+C:\Users\Administrator\RiderProjects\netMvcTest\netMvcTest.IBLL\bin\Debug\netMvcTest.Model.dll.config
+C:\Users\Administrator\RiderProjects\netMvcTest\netMvcTest.IBLL\bin\Debug\EntityFramework.xml
+C:\Users\Administrator\RiderProjects\netMvcTest\netMvcTest.IBLL\obj\Debug\netMvcTest.IBLL.csprojAssemblyReference.cache
+C:\Users\Administrator\RiderProjects\netMvcTest\netMvcTest.IBLL\obj\Debug\netMvcTest.IBLL.csproj.CopyComplete
+C:\Users\Administrator\RiderProjects\netMvcTest\netMvcTest.IBLL\obj\Debug\netMvcTest.IBLL.dll
+C:\Users\Administrator\RiderProjects\netMvcTest\netMvcTest.IBLL\obj\Debug\netMvcTest.IBLL.pdb

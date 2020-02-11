@@ -1,0 +1,62 @@
+﻿@model netMvcTest.Dto.Article.ArticleDto
+
+@{
+    ViewBag.Title = "ArticleDetails";
+}
+
+<h2>ArticleDetails</h2>
+
+<div>
+    <h4>ArticleDto</h4>
+    <hr/>
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Title)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Title)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Content)
+        </dt>
+
+        <dd>
+            @* html.raw 不做转码操作 直接 显示 dto的 文本  *@
+            @Html.Raw(Model.Content)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CommentCount)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CommentCount)
+        </dd>
+
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "EditArticle", new {id = Model.Id}) |
+    @Html.ActionLink("Back to List", "Index")
+    <button onclick="btnLike(this,true)" class="btn btn-xs btn-success ">点赞</button>
+    <button onclick="btnLike(this,false)" class="btn btn-xs btn-warning">反对</button>
+</p>
+@section headers
+{
+    <script>
+    const articleId = '@Model.Id';
+    async function btnLike(btn,isLike){
+        const res= isLike
+         ? await $.ajax({ url:`/Article/addLikeCount/${articleId}/true`, type:"post" })
+         : await $.ajax({ url:`/Article/addLikeCount/${articleId}/false`, type:"post" }) ;
+        btn.disabled=true;
+        console.log(res);
+        if (!res.Success) return layer.msg('失败!',{icon:1});
+        return layer.msg(res.Msg,{icon:1})
+    }
+    </script>
+    
+}
